@@ -73,7 +73,7 @@ public class RequestParameterBuilder extends BaseTypeBuilder {
       final AnnotationValue value =
          elementValue(param, RequestParam.class, "required");
       if (value != null) {
-         type.setRequired(Boolean.getBoolean(value.value().toString().trim()));
+         type.setRequired(Boolean.parseBoolean(value.value().toString().trim()));
       }
 
    }
